@@ -1,4 +1,4 @@
-module github.com/flant/kube-client
+module github.com/akaitux/kube-client
 
 go 1.19
 

@@ -14,8 +14,8 @@ import (
 	"github.com/onsi/gomega/gbytes"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/flant/kube-client/klogtologrus"
-	"github.com/flant/kube-client/klogtologrus/test/service"
+	"github.com/akaitux/kube-client/klogtologrus"
+	"github.com/akaitux/kube-client/klogtologrus/test/service"
 )
 
 // Test that adapter is working through default import in another package

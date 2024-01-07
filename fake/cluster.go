@@ -12,8 +12,8 @@ import (
 	"k8s.io/apimachinery/pkg/version"
 	fakediscovery "k8s.io/client-go/discovery/fake"
 
-	klient "github.com/flant/kube-client/client"
-	"github.com/flant/kube-client/manifest"
+	klient "github.com/akaitux/kube-client/client"
+	"github.com/akaitux/kube-client/manifest"
 )
 
 type Cluster struct {
