@@ -136,11 +136,14 @@ func (c *Client) Init() error {
 		// Try to load from kubeconfig in flags or from ~/.kube/config
 		var outOfClusterErr error
 		config, defaultNs, outOfClusterErr = getOutOfClusterConfig(c.contextName, c.configPath)
+		logEntry.Debugf("getOutOfClusterConfig: %v, %v, %v", config, defaultNs, outOfClusterErr)
 
 		if config == nil {
 			if hasInClusterConfig() {
+		        logEntry.Debugf("Setup InClusterConfig")
 				// Try to configure as inCluster
 				config, defaultNs, err = getInClusterConfig()
+		        logEntry.Debugf("getInClusterConfig: %v, %v, %v", config, defaultNs, outOfClusterErr)
 				if err != nil {
 					if c.configPath != "" || c.contextName != "" {
 						if outOfClusterErr != nil {
